@@ -6,10 +6,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/adjustments.css" rel="stylesheet">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>WooGem | Contact</title>
   </head>
   <body class="d-flex flex-column h-100">
@@ -58,11 +60,12 @@
   <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img src="images/woogem-gem.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          <img src="images/woogem-icon-crop.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
           <div id="contact-form-holder">
-            <h1 class="display-5 fw-bold lh-1 mb-3">Contact</h1>
+            <h1 class="display-5 fw-bold lh-1 mb-3" style="display: inline-block">Contact</h1>
+            <span class="align-top"> <i class="bi bi-info-circle" data-bs-toggle="popover" title="Registered Agent" data-bs-content="Robert A. Risk: 1923 W Archer PL, Tulsa, OK 74127"></i></span>
             <p>We value privacy and confidentiality. We do not share your information with outside parties. Nor will we send you spam.</p>
             <form id="contact-form" method="post">
               <div class="mb-3">
@@ -132,6 +135,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script> -->
+    <script>
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+    </script>
     <script src="js/submitToAPI.js"></script>
   </body>
 </html>
