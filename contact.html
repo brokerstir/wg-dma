@@ -18,7 +18,7 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md fixed-top bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">WooGem</a>
+      <a class="navbar-brand" href="#">WooGem <small>LLC</small></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -61,26 +61,43 @@
           <img src="images/woogem-gem.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">WooGem</h1>       
-          <form id="contact-form" method="post">
-            <div class="mb-3">
-              <label for="nameInput" class="form-label">Name</label>
-              <input type="name" class="form-control" id="name-input">
-            </div>
-            <div class="mb-3">
-              <label for="phoneInput" class="form-label">Phone</label>
-              <input type="phone" class="form-control" id="phone-input">
-            </div>
-            <div class="mb-3">
-              <label for="emailInput" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email-input">
-            </div>
-            <div class="mb-3">
-              <label for="messageInput" class="form-label">How can we help you?</label>
-              <textarea class="form-control" id="message-input" rows="5"></textarea>
-            </div>
-            <button type="submit" onClick="submitToAPI(event)" class="btn btn-primary">Send</button>
-          </form>
+          <div id="contact-form-holder">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Contact</h1>
+            <p>We value privacy and confidentiality. We do not share your information with outside parties. Nor will we send you spam.</p>
+            <form id="contact-form" method="post">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input type="name" class="form-control" id="name-input" required>
+              </div>
+              <div class="mb-3">
+                <label for="phoneInput" class="form-label">Phone</label>
+                <input type="phone" class="form-control" id="phone-input" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email-input" required>
+              </div>
+              <div class="mb-3">
+                <label for="messageInput" class="form-label">How can we help you?</label>
+                <div class="form-text">Feel free share your primary goal and how we might be able to help you. Please let us know your preferred method and time to be contacted. <small>(1500 character limit)</small></div>
+                <textarea class="form-control" id="message-input" rows="5" maxlength="1500" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="validateInput" class="form-label">Security Check</label>
+                <div class="form-text">Please enter the numeric day of the month. For example, if today is the tenth, then enter 10.</small></div>
+                <input type="security" class="form-control" id="security-input">
+              </div>
+              <button type="submit" onClick="submitToAPI(event)" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+          <div class="display-none" id="message-sent">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Success</h1>
+            <p>Thank you! Message sent. We shall follow-up accordingly.</p>
+          </div>
+          <div class="display-none" id="message-not-sent">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Message Not Sent</h1>
+            <p>Sorry, the security check did not pass. Try again.</p>
+          </div>
         </div>
       </div>
     </div>   

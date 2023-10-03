@@ -2,25 +2,17 @@ function submitToAPI(e) {
     e.preventDefault();
     var URL = "https://vi5utyqa14.execute-api.us-east-1.amazonaws.com";
 
-        var Namere = /[A-Za-z]{1}[A-Za-z]/;
-        if (!Namere.test($("#name-input").val())) {
-                     alert ("Name can not less than 2 char");
-            return;
-        }
-        var mobilere = /[0-9]{10}/;
-        if (!mobilere.test($("#phone-input").val())) {
-            alert ("Please enter valid mobile number");
-            return;
-        }
-        if ($("#email-input").val()=="") {
-            alert ("Please enter your email id");
-            return;
-        }
-
-        var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-        if (!reeamil.test($("#email-input").val())) {
-            alert ("Please enter valid email address");
-            return;
+        var currentDate = new Date()
+        var dayOfMonth = currentDate.getDate()
+        if ($("#security-input").val() != dayOfMonth) {
+            // alert ("Sorry, message cannot be sent.");
+           document.getElementById("contact-form-holder").style.display = "none";
+           document.getElementById("message-not-sent").style.display = "block";
+           setTimeout(function() {
+               document.getElementById("contact-form-holder").style.display = "block";
+               document.getElementById("message-not-sent").style.display = "none";
+           }, 3000);
+           return;
         }
 
     var name = $("#name-input").val();
@@ -43,13 +35,15 @@ function submitToAPI(e) {
      data: JSON.stringify(data),
      success: function () {
        // clear form and show a success message
-       alert("Message Sent - Thank You!");
        document.getElementById("contact-form").reset();
-       window.location.replace("https://woogem.com");
+       document.getElementById("contact-form-holder").style.display = "none";
+       document.getElementById("message-sent").style.display = "block";
+       setTimeout(function() {
+         window.location.replace("https://woogem.com");
+       }, 3000);
      },
      error: function () {
        // show an error message
-       alert("Something Went Wrong");
-       document.getElementById("contact-form").reset();
+       alert ("An error ocurred. Message not sent. Call us at 918-732-9079.");
      }});
     }
