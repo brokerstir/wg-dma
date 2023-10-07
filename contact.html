@@ -60,7 +60,7 @@
   <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-          <img src="images/woogem-icon-crop.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          <img src="images/woogem-icon-crop-tight.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
           <div id="contact-form-holder">
@@ -82,24 +82,24 @@
               </div>
               <div class="mb-3">
                 <label for="messageInput" class="form-label">How can we help you?</label>
-                <div class="form-text">Feel free share your primary goal and how we might be able to help you. Please let us know your preferred method and time to be contacted. <small>(1500 character limit)</small></div>
+                <div class="form-text">Feel free to share your primary goal and how we might be able to help you. Please let us know your preferred method and time to be contacted. <small>(1500 character limit)</small></div>
                 <textarea class="form-control" id="message-input" rows="5" maxlength="1500" required></textarea>
               </div>
               <div class="mb-3">
-                <label for="validateInput" class="form-label">Security Check</label>
-                <div class="form-text">Please enter the numeric day of the month. For example, if today is the tenth, then enter 10.</small></div>
+                <label for="validateInput" class="form-label">Human Check</label>
+                <div class="form-text">Please enter the numeric day of the month. For example, if today is the ninth, then enter 9.</small></div>
                 <input type="security" class="form-control" id="security-input">
               </div>
               <button type="submit" onClick="submitToAPI(event)" class="btn btn-primary">Send</button>
             </form>
           </div>
-          <div class="display-none" id="message-sent">
+          <div id="message-sent">
             <h1 class="display-5 fw-bold lh-1 mb-3">Success</h1>
             <p>Thank you! Message sent. We shall follow-up accordingly.</p>
           </div>
-          <div class="display-none" id="message-not-sent">
+          <div id="message-not-sent">
             <h1 class="display-5 fw-bold lh-1 mb-3">Message Not Sent</h1>
-            <p>Sorry, the security check did not pass. Try again.</p>
+            <p>Sorry, the human check did not pass. Try again.</p>
           </div>
         </div>
       </div>
@@ -135,19 +135,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("message-not-sent").style.display = "none";
+        document.getElementById("message-sent").style.display = "none";
+      };
+    </script>
     <!-- <script>
       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
     </script> -->
+    <script src="js/submitToAPI.js"></script>
     <script>
       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)
       })
     </script>
-    <script src="js/submitToAPI.js"></script>
   </body>
 </html>
  
