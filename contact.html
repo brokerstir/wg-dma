@@ -9,6 +9,23 @@
       gtag('js', new Date());
 
       gtag('config', 'G-6NYHNX0HPM');
+      gtag('config', 'AW-1025374810');
+    </script>
+    <!-- Event snippet for Website traffic conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-1025374810/BDrOCJeWzOoYENr09-gD',
+          'event_callback': callback
+      });
+      return false;
+    }
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,7 +116,7 @@
                 <div class="form-text">Please enter the numeric day of the month. For example, if today is the ninth, then enter 9.</small></div>
                 <input type="security" class="form-control" id="security-input">
               </div>
-              <button type="submit" onClick="submitToAPI(event)" class="btn btn-primary">Send</button>
+              <button type="submit" onClick="submitToAPI(event);gtag_report_conversion();" class="btn btn-primary">Send</button>
             </form>
           </div>
           <div id="message-sent">
