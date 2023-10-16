@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascading Spotlight Effect</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .spotlight-container {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .spotlight {
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: spotlight-animation 3s infinite linear;
+    }
+
+    @keyframes spotlight-animation {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0.6;
+      }
+      50% {
+        width: 60vw;
+        height: 60vw;
+        opacity: 0.1;
+      }
+      100% {
+        width: 120vw;
+        height: 120vw;
+        opacity: 0.05;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="spotlight-container">
+    <div class="spotlight" style="background: radial-gradient(circle, rgba(30, 144, 255, 0.8) 0%, rgba(30, 144, 255, 0) 100%);"></div>
+    <div class="spotlight" style="background: radial-gradient(circle, rgba(169, 169, 169, 0.6) 0%, rgba(169, 169, 169, 0) 100%);"></div>
+  </div>
+
+  <div class="text-center container my-auto">
+    <h1 class="display-4">WooGem LLC</h1>
+    <p class="lead">Digital Marketing</p>
+    <p class="lead">Explore our pricing packages to elevate your business.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
