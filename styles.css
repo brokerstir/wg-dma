@@ -1,0 +1,40 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b4d1fe;
+  overflow: hidden;
+}
+
+.cascading-animation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.gradient-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(135deg, #b4d1fe, #d9e7ff, #f1f5ff);
+  background-size: 300% 300%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}

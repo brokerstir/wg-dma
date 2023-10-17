@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascading Spotlight Effect</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .spotlight-container {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .spotlight {
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: spotlight-animation 3s infinite linear;
+    }
+
+    @keyframes spotlight-animation {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0.3;
+      }
+      50% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+      }
+      100% {
+        width: 800px;
+        height: 800px;
+        opacity: 0.1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="spotlight-container">
+    <div class="spotlight" style="background: radial-gradient(circle, rgba(173, 216, 230, 1) 0%, rgba(173, 216, 230, 0) 100%);"></div>
+    <div class="spotlight" style="background: radial-gradient(circle, rgba(169, 169, 169, 1) 0%, rgba(169, 169, 169, 0) 100%);"></div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center p-5">
+        <h1>Welcome to Our Website</h1>
+        <p>Explore the amazing features we have to offer.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
