@@ -22,7 +22,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/adjustments.css" rel="stylesheet">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
-    <title>WooGem</title>
+    <title>WooGem | Landing Page</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -323,7 +323,79 @@
         </tbody>
       </table>
     </div>
+
+    <!-- Button trigger modal -->
+    <div class="text-center mb-4">
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#riskFreeModal">Risk-Free Trial</button>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#founderModal">Founder Message</button>
+        <a href="contact-landing-page.html" class="btn btn-outline-primary">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="founderModal" tabindex="-1" aria-labelledby="founderModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="founderModalLabel">Founder Message</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Our Promise: A Digital Marketing Agency Dedicated to Your Success
+            </p>
+            <p>I am thrilled to introduce you to WooGem LLC, a venture born out of a genuine desire to redefine the digital marketing landscape. As the founder, my mission is rooted in addressing the common pain points I observed in our industry.</p>
+            <p>
+            Too often, I noticed people being overcharged by similar agencies, receiving subpar services that fell short of the cutting edge. This drove me to establish an agency committed to not only delivering exceptional work but ensuring our clients feel content and valued.</p>
+            <p>
+            At WooGem LLC, we prioritize client satisfaction above all else. Our goal is to foster long-term relationships by guiding you through the ever-evolving and sometimes perplexing digital world. We believe in providing genuine value and ensuring you navigate this landscape seamlessly, achieving your unique goals.</p>
+            <p>
+            We pride ourselves on delivering quality, innovative solutions that make a meaningful impact on your business. Your success is our success, and we're dedicated to exceeding your expectations every step of the way.</p>
+            <p>
+            I look forward to the possibility of working with you and helping you achieve your digital marketing objectives.
+            </p>
+            <p>
+            Warm regards,
+            </br>
+            <span style="font-size: 28px; opacity: 0.6; font-family: 'Brush Script MT', cursive;">Robert A. Risk</span>
+            </br>
+            Robert A. Risk
+            </br>
+            Founder, WooGem LLC
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="riskFreeModal" tabindex="-1" aria-labelledby="riskFreeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="riskFreeModalLabel">Risk-Free Trial</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Experience Design Excellence Risk-Free!
+            </p>
+            <p>We're confident in our ability to deliver outstanding design work, and we want you to be completely satisfied with the results. That's why we're offering a risk-free trial of our services.</p>
+            <p>
+            Here's how it works: When you choose to work with us, we'll create the first draft of your design project. If, for any reason, you're not thrilled with the initial results, we'll happily refund your full payment. No questions asked. Your satisfaction is our top priority.</p>
+            <p>
+            With our risk-free trial, you can explore the world of creative possibilities without any financial worries. We're committed to bringing your vision to life, and we're confident you'll love what we create.</p>
+            <p>
+            Get started with us today and experience design excellence with peace of mind!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+</div>
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
@@ -332,9 +404,8 @@
       </div>
     </div>
   </footer>
-</div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     
   </body>
 </html>
