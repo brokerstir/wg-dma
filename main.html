@@ -29,7 +29,10 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md fixed-top bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">WooGem <small>LLC</small></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/woogem-icon-crop-tight.png" alt="" width="35" height="28" class="d-inline-block align-text-top">
+        WooGem <small>LLC</small>
+      </a>
       <form class="d-flex" role="search">
         <a class="btn btn-primary" href="#free-consult" role="button">Free Consult</a>
       </form>
@@ -141,25 +144,33 @@
   <div class="container py-4">
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5" id="section1">
-        <h1 class="display-5 fw-bold lh-1 mb-3">WooGem <small>LLC</small></h1>
-        <p class="p-size">Empower your business with cutting-edge solutions from our tech consulting agency, supported by a proven winner. Elevate your success through innovation and expertise.</p>
-        <button class="btn btn-outline-primary btn-lg" type="button">Karma button</button>
+          <h1 class="display-5 fw-bold lh-1 mb-3">
+            WooGem <small>LLC</small>
+          </h1>
+          <div id="inspirationContainer">
+            <p class="p-size">Empower your business with cutting-edge solutions from our tech consulting agency, supported by a proven winner. Elevate your success through innovation and expertise.</p>
+            <button class="btn btn-outline-primary btn-lg" onclick="showInspirationalQuote()" type="button">Free Inspiration</button>
+          </div>
       </div>
     </div>
 
     <div class="row align-items-md-stretch">
       <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
+        <div class="h-100 p-5 text-bg-light rounded-3">
           <h2 class="display-6 fw-bold lh-1 mb-3 pb-2">Why We're Different</h2>
-          <p clase="p-size">We seamlessly adapt to evolving needs and emerging tech landscapes. Active client engagement fuels our decision-making, ensuring tailor-made solutions. Founded by an industry veteran, our legacy of proven success propels your business forward with confidence.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
+          <p clase="p-size">We won't confuse you with technial jargon. We deliver common sense solutions and free work proposals.</p>
+          <a class="btn btn-outline-secondary" href="#free-consult" role="button">Let's Talk</a>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Add borders</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        <div class="h-100 p-2 bg-light border rounded-3">
+          <div class="ratio ratio-16x9 pb-md-2 pb-0">
+            <!-- <video src="video/WooGem-Promo-Take1-HD.mp4" controls></video> -->
+            <video controls poster="images/promo-thumbnail.png">
+              <source src="video/WooGem-Promo-Take1-HD.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>   
         </div>
       </div>
     </div>
@@ -176,60 +187,29 @@
           <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#bar-chart-line"/></svg>
           <div>
             <h3 class="display-7 fw-bold lh-1 mb-3">Business Intelligence</h3>
-            <p class="p-size">We aid in extracting vital insights for informed decisions. Our expertise includes implementing analytics tools, visualization techniques, and interpreting data to steer effective business strategies.</p>
+            <p class="p-size">We aid in extracting vital insights for informed decisions. Our expertise includes implementing analytics tools, visualization techniques, predictive models and insightful interpretation of data to steer effective business strategies.</p>
           </div>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#database-lock"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Data Governance</h3>
-          <p class="p-size">We guide you in ensuring data quality for precise decision-making. Offering expertise in policies, procedures, and safety standards, we establish roles, implement quality frameworks, and create handling protocols, enhancing your overall data management capabilities.</p>
+          <h3 class="display-7 fw-bold lh-1 mb-3">Web App Development</h3>
+          <p class="p-size">Whether you need an online presence or a business application to streamline processes, we can provide a solution. We craft sites with our proprietary framework built on open-source libraries. And we offer rapid app development with the Power Apps platform.</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#person-plus"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Tech Interviews</h3>
-          <p class="p-size">Outsourcing technical interviews saves time for internal engineering teams, enabling a focus on core business activities. This efficient approach reduces recruitment efforts, leading to better outcomes and cost savings compared to high recruiter fees associated with extensive in-house interview processes.</p>
+          <h3 class="display-7 fw-bold lh-1 mb-3">Technical Interviews</h3>
+          <p class="p-size">Avoid paying high fees recruiter who does little to earn it. Avoid hiring to fill a technical position to find out the candidate does not have the skills you were told. Save time on interviews. Our technical interview process will scope good candidates for you.</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#robot"/></svg>
         <div>
           <h3 class="display-7 fw-bold lh-1 mb-3">AI Strategies</h3>
-          <p class="p-size">A company can harness AI for operational efficiency, automating tasks, optimizing workflows, and streamlining decision-making. AI facilitates valuable insights from large datasets, enhances customer experiences with personalized interactions, and ensures competitiveness through innovations like predictive analytics, natural language processing, and computer vision, fostering continuous growth.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#code-square"/></svg>
-        <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Web Development</h3>
-          <p class="p-size">Establishing a robust online presence is imperative. Our adept consultants specialize in website development, seamlessly integrate e-commerce solutions, and optimize user experiences. We craft digital strategies with precision to not only attract but also retain a loyal customer base, ensuring sustained success for your business.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cloud-check"/></svg>
-        <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Cloud Adoption</h3>
-          <p class="p-size">Small businesses seek guidance on adopting cloud computing solutions for enhanced scalability, flexibility, and cost-effectiveness. Consultants assist with cloud strategy, migration, and selecting the right cloud services.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#star"/></svg>
-        <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Skill Training</h3>
-          <p class="p-size">Empowering your workforce is paramount. Our consultants go beyond implementing efficient business workflows; we provide comprehensive training programs to elevate digital literacy and technical skills. Our focus is on ensuring your employees harness the full potential of the tools at their disposal, fostering continuous growth.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#intersect"/></svg>
-        <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Software Integration</h3>
-          <p class="p-size">Small businesses with unique needs may require custom software solutions. Consultants help define requirements, oversee development projects, and ensure that the software aligns with business goals. Small businesses often need help selecting the right software solutions for their operations. Consultants evaluate business requirements, recommend suitable software, and assist with integration.</p>
-         <!--  <a href="#" class="btn btn-primary">
-            Primary button
-          </a> -->
+          <p class="p-size">Many features of this site are a testament to our mastery in guiding AI with precise instructions aligned with our vision. Proficient in eliciting optimal responses, we can unlock AI's potential for your unique needs. Imagine the possibilities AI holds for your success.</p>
         </div>
       </div>
     </div>
@@ -258,10 +238,7 @@
         <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#globe"/></svg>
         <div>
           <h3 class="display-7 fw-bold lh-1 mb-3">Team</h3>
-          <p class="p-size">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <!-- <a href="#" class="btn btn-primary">
-            Primary button
-          </a> -->
+          <p class="p-size">We are dedicated to assembling a globally-distributed team of top talent. Our team is not driven by meeting sales goals. It is driven by solutions that meet your goals.</p>
         </div>
       </div>
     </div>
@@ -270,7 +247,7 @@
   <div class="b-example-divider"></div>
 
   <div class="container col-xl-10 col-xxl-8 px-4 py-5" id="free-consult">
-    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">Free Consult</h2>
+    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">Free Consultation</h2>
     <div class="row align-items-center g-lg-5 py-5">
       <form class="p-4 p-md-5 border rounded-3 bg-light id="contact-form" method="post">
         <div class="mb-3">
@@ -308,7 +285,8 @@
 
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
-    <span class="text-muted">WooGem <small>LLC &copy; 2023</small> - <a href="#" id="facebookLink">Visit our Facebook Page</a></span>
+    <!-- <span class="text-muted">WooGem <small>LLC &copy; 2023</small> - <a href="#" id="facebookLink">Visit our Facebook Page</a></span> -->
+    <span class="text-muted">WooGem <small>LLC &copy; 2024</small></span>
   </div>
 </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -320,5 +298,6 @@
     </script>
     <script src="js/openFacebook.js"></script>
     <script src="js/submitToAPI.js"></script>
+    <script src="js/inspirationalQuotes.js"></script>
   </body>
 </html>
