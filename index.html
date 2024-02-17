@@ -41,7 +41,7 @@
         WooGem <small>LLC</small>
       </a>
       <form class="d-flex" role="search">
-        <a class="btn btn-primary" href="#free-consult" role="button">Free Consult</a>
+        <a class="btn btn-outline-success" href="#free-consult" id="consultButton" role="button">Free Consult</a>
       </form>
     </div>
   </nav>
@@ -149,28 +149,28 @@
   <div class="b-example-divider"></div>
 
   <div class="container py-4">
-    <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="p-5 mb-4 bg-light rounded-3" id="slideFromTop">
       <div class="container-fluid py-5" id="section1">
           <h1 class="display-5 fw-bold lh-1 mb-3">
             WooGem <small>LLC</small>
           </h1>
           <div id="inspirationContainer">
             <p class="p-size">Empower your business with cutting-edge solutions from our tech consulting agency, supported by a proven winner. Elevate your success through innovation and expertise.</p>
-            <button class="btn btn-outline-primary btn-lg" onclick="showInspirationalQuote()" type="button">Free Inspiration</button>
+            <button class="btn btn-outline-primary btn-lg" id="inspireButton" onclick="showInspirationalQuote()" type="button">Free Inspiration</button>
           </div>
       </div>
     </div>
 
     <div class="row align-items-md-stretch">
       <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-light rounded-3">
+        <div class="h-100 p-5 text-bg-light rounded-3" id="slideFromLeft">
           <h2 class="display-6 fw-bold lh-1 mb-3 pb-2">Why We're Different</h2>
           <p clase="p-size">We won't confuse you with technial jargon. We deliver common sense solutions and free work proposals.</p>
-          <a class="btn btn-outline-secondary" href="#free-consult" role="button">Let's Talk</a>
+          <a class="btn btn-outline-secondary" id="talkButton" href="#free-consult" role="button">Let's Talk</a>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="h-100 p-2 bg-light border rounded-3">
+        <div class="h-100 p-2 bg-light border rounded-3" id="slideFromRight">
           <div class="ratio ratio-16x9 pb-md-2 pb-0">
             <video controls poster="images/promo-thumbnail.png">
               <source src="video/woogem-promo-2.mp4" type="video/mp4">
@@ -304,5 +304,6 @@
     <script src="js/openFacebook.js"></script>
     <script src="js/submitToAPI.js"></script>
     <script src="js/inspirationalQuotes.js"></script>
+    <script src="js/animationsOnLoad.js"></script>
   </body>
 </html>

@@ -60,3 +60,53 @@
 .display-none {
   display: none;
 }
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(+70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to specific elements */
+.slide-in-top {
+  animation: slideInFromTop 1.25s ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 1.25s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1.25s ease-in-out;
+}
+
+.transitioning {
+    transition: all 1.25s ease; /* Adjust duration and easing as needed */
+}
