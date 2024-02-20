@@ -39,14 +39,15 @@ function submitToAPI(e) {
        // document.getElementById("contact-form").reset();
        // document.getElementById("contact-form-holder").style.display = "none";
        // document.getElementById("message-sent").style.display = "block";
-       document.getElementById("submit-button").style.display = "none";
+       // document.getElementById("submit-button").style.display = "none";
        document.getElementById("success-alert").style.display = "block";
        setTimeout(function() {
          window.location.replace("https://woogem.com");
        }, 2000);
      },
      error: function () {
+       document.getElementById("warning-alert").style.display = "block";
        // show an error message
-       alert ("An error ocurred. Message not sent. Call us at 918-732-9079.");
+       // alert ("An error ocurred. Message not sent. Call us at 918-732-9079.");
      }});
     }
