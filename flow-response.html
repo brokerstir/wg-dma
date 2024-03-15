@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-group {
+      display: none; /* Hide all form groups by default */
+    }
+    .active {
+      display: block; /* Show the active form group */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <form id="multiStepForm">
+    <div class="form-group active">
+      <label for="input1">Input 1:</label>
+      <input type="text" class="form-control" id="input1">
+      <button type="button" class="btn btn-primary mt-2 nextBtn">Continue</button>
+    </div>
+    <div class="form-group">
+      <label for="input2">Input 2:</label>
+      <input type="text" class="form-control" id="input2">
+      <button type="button" class="btn btn-primary mt-2 nextBtn">Continue</button>
+    </div>
+    <!-- Add more form groups as needed -->
+    <button type="submit" class="btn btn-success mt-3">Submit</button>
+  </form>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const formGroups = document.querySelectorAll('.form-group');
+  const nextBtns = document.querySelectorAll('.nextBtn');
+
+  let currentStep = 0;
+
+  function showStep(step) {
+    formGroups.forEach((group, index) => {
+      if (index === step) {
+        group.classList.add('active');
+      } else {
+        group.classList.remove('active');
+      }
+    });
+  }
+
+  nextBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+      currentStep++;
+      showStep(currentStep);
+    });
+  });
+
+  document.getElementById('multiStepForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Get all input values here and perform any necessary actions
+    const input1Value = document.getElementById('input1').value;
+    const input2Value = document.getElementById('input2').value;
+    console.log("Input 1:", input1Value);
+    console.log("Input 2:", input2Value);
+  });
+});
+</script>
+
+</body>
+</html>

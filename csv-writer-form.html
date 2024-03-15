@@ -94,30 +94,25 @@
             <h1 class="display-5 fw-bold lh-1 mb-3" style="display: inline-block">Contact</h1>
             <span class="align-top"> <i class="bi bi-info-circle" data-bs-toggle="popover" title="Registered Agent" data-bs-content="Robert A. Risk: 1923 W Archer PL, Tulsa, OK 74127"></i></span>
             <p>We value privacy and confidentiality. We do not share your information with outside parties. Nor will we send you spam.</p>
-            <form id="contact-form" method="post">
+            <form id="contact-form" method="put">
               <div class="mb-3">
-                <label for="nameInput" class="form-label">Name</label>
-                <input type="name" class="form-control" id="name-input" required>
+                <label for="firstNameInput" class="form-label">First Name</label>
+                <input type="name" class="form-control" id="first-name-input" required>
               </div>
               <div class="mb-3">
-                <label for="phoneInput" class="form-label">Phone</label>
-                <input type="phone" class="form-control" id="phone-input" required>
+                <label for="lastNameInput" class="form-label">Last Name</label>
+                <input type="name" class="form-control" id="last-name-input" required>
               </div>
               <div class="mb-3">
                 <label for="emailInput" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email-input" required>
               </div>
               <div class="mb-3">
-                <label for="messageInput" class="form-label">How can we help you?</label>
-                <div class="form-text">Feel free to share your primary goal and how we might be able to help you. Please let us know your preferred method and time to be contacted. <small>(1500 character limit)</small></div>
-                <textarea class="form-control" id="message-input" rows="5" maxlength="1500" required></textarea>
-              </div>
-              <div class="mb-3">
                 <label for="validateInput" class="form-label">Human Check</label>
                 <div class="form-text">Please enter the numeric day of the month. For example, if today is the ninth, then enter 9.</small></div>
                 <input type="security" class="form-control" id="security-input">
               </div>
-              <button type="submit" onClick="submitToResponderAPI(event);gtag_report_conversion();" class="btn btn-primary">Send</button>
+              <button type="submit" onClick="submitToCSVWriterPlus(event);gtag_report_conversion();" class="btn btn-primary">Send</button>
             </form>
             <br>
             <p>Alternatively, contact us using <a id="messengerLink" href="#">Facebook Messenger</a></p>
@@ -170,7 +165,7 @@
         document.getElementById("message-sent").style.display = "none";
       };
     </script>
-    <script src="js/submitToResponderAPI.js"></script>
+    <script src="js/submitToCSVWriterPlus.js"></script>
     <script src="js/openMessenger.js"></script>
     <script>
       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))

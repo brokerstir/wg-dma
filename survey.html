@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NYHNX0HPM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6NYHNX0HPM');
+      gtag('config', 'AW-1025374810');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="WooGem LLC">
+    <meta property="og:description" content="Empower your business with cutting-edge solutions from our tech consulting agency.">
+    <meta property="og:image" content="images/woogem-icon-crop-tight.png">
+    <meta property="og:url" content="https://woogem.com/">
+    <meta name="og:type" content="website">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/adjustments.css" rel="stylesheet">
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+    <style>
+      .form-group {
+        display: none; /* Hide all form groups by default */
+      }
+      .active {
+        display: block; /* Show the active form group */
+      }
+
+      .form-label {
+        font-size: 1.25rem;
+      }
+
+      .form-radio {
+        transform: scale(1.5);
+        margin-right: 5px;
+      }
+
+      .form-text {
+        font-size: 1.25rem;
+      }
+
+      .form-button {
+        font-size: 1.25rem;
+      }
+    </style>
+    <title>WooGem</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md fixed-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/woogem-icon-crop-tight.png" alt="" width="35" height="28" class="d-inline-block align-text-top">
+        WooGem <small>LLC</small>
+      </a>
+      <form class="d-flex" role="search">
+        <a class="btn btn-outline-success" href="#free-consult" id="consultButton" role="button">Free Consult</a>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5" id="free-consult">
+    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">Free Consultation</h2>
+    <div class="row align-items-center g-lg-5 py-5">
+      <form id="multiStepForm">
+        <div class="form-group active">
+          <label for="question1" class="form-label">Question 1: What is your favorite primary color?</label><br>
+          <input type="radio" id="q1Option1" name="question1" value="a" class="form-radio">
+          <label for="q1Option1" class="form-label">A</label><br>
+          <p class="form-text">red</p>
+          <input type="radio" id="q1Option2" name="question1" value="b" class="form-radio">
+          <label for="q1Option2" class="form-label">B</label><br>
+          <p class="form-text">yellow</p>
+          <input type="radio" id="q1Option3" name="question1" value="c" class="form-radio">
+          <label for="q1Option3" class="form-label">C</label><br>
+          <p class="form-text">blue</p>
+          <button type="button" class="btn btn-primary mt-2 nextBtn form-button">Continue</button>
+        </div>
+        <div class="form-group">
+          <label for="question2" class="form-label">Question 2: What is your favorite meal?</label><br>
+          <input type="radio" id="q2Option1" name="question2" value="a" class="form-radio">
+          <label for="q2Option1" class="form-label">A</label><br>
+          <p class="form-text">breakfast</p>
+          <input type="radio" id="q2Option2" name="question2" value="b" class="form-radio">
+          <label for="q2Option2" class="form-label">B</label><br>
+          <p class="form-text">lunch</p>
+          <input type="radio" id="q2Option3" name="question2" value="c" class="form-radio">
+          <label for="q2Option3" class="form-label">C</label><br>
+          <p class="form-text">dinner</p>
+          <button type="button" class="btn btn-primary mt-2 nextBtn form-button">Continue</button>
+        </div>
+        <p id="finalStep" style="display: none;" class="form-text">Are you ready?</p>
+        <button type="submit" class="btn btn-success mt-3 form-button" style="display: none;">Submit</button>
+      </form>
+      <div id="profile" style="display: none;">
+        <!-- Profile content will be displayed here -->
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">WooGem <small>LLC &copy; 2023</small> - <a href="#" id="facebookLink">Visit our Facebook Page</a></span>
+  </div>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/openFacebook.js"></script>
+    <script src="js/surveyResponder.js"></script>
+  </body>
+</html>
