@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const nextBtns = document.querySelectorAll('.nextBtn');
   const finalStep = document.getElementById('finalStep');
   const submitBtn = document.querySelector('button[type="submit"]');
-  const fs = require('fs');
 
   let currentStep = 0;
 
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const answerCombo = [q1Value, q2Value];
     displaySillyProfile(answerCombo);
-    writeToCSV(answerCombo) 
 
     function displaySillyProfile(answerCombo) {
       console.log("getSillyProfile");
@@ -100,18 +98,5 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    function writeToCSV(data) {
-      const csvFilePath = 'existing-file.csv'; // Path to the existing CSV file
-      const csvContent = data.map(row => row.join(',')).join('\n'); // Convert data array to CSV format
-
-      // Append data to the existing CSV file
-      fs.appendFile(csvFilePath, csvContent, (err) => {
-          if (err) {
-              console.error('Error writing to CSV file:', err);
-          } else {
-              console.log('Data appended to CSV file successfully!');
-          }
-      });
-    }
   });
 });
