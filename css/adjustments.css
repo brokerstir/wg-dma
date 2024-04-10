@@ -1,3 +1,13 @@
+.color-change {
+  transition: background-color 0.5s ease;
+  /* Initial color */
+  background-color: #e6f0ff;
+  /* Other styling */
+  padding: 5rem;
+  margin-bottom: 4rem;
+  border-radius: 0.3rem;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
