@@ -20,11 +20,11 @@
     <meta property="og:url" content="https://woogem.com/">
     <meta name="og:type" content="website">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_dir/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_dir/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_dir/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon_dir/favicon.ico">
+    <link rel="manifest" href="favicon_dir/site.webmanifest">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/adjustments.css" rel="stylesheet">
     <link href="css/sticky-footer-navbar.css" rel="stylesheet">
@@ -36,8 +36,8 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md fixed-top bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="images/woogem-icon-crop-tight.png" alt="" width="35" height="28" class="d-inline-block align-text-top">
+      <a class="navbar-brand company-name" href="#">
+        <img src="images/logo6-circle-trans.png" alt="" width="35" height="28" class="d-inline-block align-text-top rotate-on-load">
         WooGem <small>LLC</small>
       </a>
       <form class="d-flex" role="search">
@@ -149,29 +149,38 @@
   <div class="b-example-divider"></div>
 
   <div class="container py-4">
-    <div class="p-5 mb-4 bg-light rounded-3" id="slideFromTop">
-      <div class="container-fluid py-5" id="section1">
-          <h1 class="display-5 fw-bold lh-1 mb-3">
-            WooGem <small>LLC</small>
-          </h1>
-          <div id="inspirationContainer">
-            <p class="p-size">We make IT look easy. Because, magic. But don't worry, it's not really magic—just a sprinkle of tech expertise and a dash of innovation to make your digital challenges disappear like magic.</p>
-            <button class="btn btn-outline-primary btn-lg" id="inspireButton" onclick="showInspirationalQuote()" type="button">Free Inspiration</button>
+    <div class="p-5 mb-4 text-bg-light rounded-3" id="slideFromTop">
+      <div class="container-fluid py-5">
+        <!-- Row for the entire content -->
+        <div class="row align-items-center">
+          <!-- Column for the logo image, which becomes top on smaller screens -->
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0 order-lg-2">
+            <img src="images/logo6-circle-trans.png" alt="Logo" class="img-fluid rotate-on-load">
           </div>
+          <!-- Column for text and button, which becomes bottom on smaller screens -->
+          <div class="col-12 col-lg-8 order-lg-1">
+            <h1 class="display-5 fw-bold lh-1 mb-3 company-name">WooGem <small>LLC</small></h1>
+
+            <div id="inspirationContainer">
+              <p class="p-size">We make IT look easy. Because, magic. But don't worry, it's not really magic—just a sprinkle of tech expertise and a dash of innovation to make your digital challenges disappear like magic.</p>
+              <button class="btn btn-outline-primary btn-lg" id="inspireButton" onclick="showInspirationalQuote()" type="button">Free Inspiration</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="row align-items-md-stretch">
       <div class="col-md-6">
         <!-- <div class="h-100 p-5 text-bg-dark rounded-3" id="slideFromRight"> -->
-        <div class="h-100 p-5 text-bg-dark rounded-3" id="slideFromRight">
-          <h2 class="display-6 fw-bold lh-1 mb-3 pb-2">Digital Goodness Delivered</h2>
+        <div class="h-100 p-5 text-bg-dark rounded-3 custom-bg-color" id="slideFromRight">
+          <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 company-name">Digital Goodness Delivered</h2>
           <p clase="p-size">In every line of code, we embed ethics, ensuring our technology uplifts as it innovates. We champion digital karma, believing what we deploy in the digital realm returns to us, fostering a future where tech is a force for good.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="h-100 p-5 text-bg-light rounded-3" id="slideFromLeft">
-          <h2 class="display-6 fw-bold lh-1 mb-3 pb-2">Why We're Different</h2>
+          <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 company-name">Why We're Different</h2>
           <p clase="p-size">Our tech firm is like a Swiss Army knife for your digital challenges—versatile, reliable, and always exactly what you need when you need it.</p>
           <a class="btn btn-outline-success" id="talkButton" href="#free-consult" role="button">Let's Talk</a>
         </div>
@@ -182,14 +191,14 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id="services-grid">
-    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">Services</h2>
+    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary company-name">Services</h2>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5" id="colorChanger">
 
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#robot"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">AI Strategies</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">AI Strategies</h3>
           <p class="p-size">Imagine AI as your business's new best friend—always on time, never needs coffee breaks, and can crunch numbers faster than a room full of accountants on energy drinks. Our tech firm turns that buddy into reality, making your business smarter and faster.</p>
         </div>
       </div>
@@ -197,7 +206,7 @@
       <div class="col d-flex align-items-start">
         <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#bar-chart-line"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Business Intelligence</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Business Intelligence</h3>
           <p class="p-size">
           Our firm's expertise in business intelligence empowers your business by emphasizing consistent data practices. Knowing how to glean insights from data ensures informed decisions, propelling your venture towards sustained success and competitive advantage.</p>
         </div>
@@ -206,7 +215,7 @@
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#database-lock"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Web App Development</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Web App Development</h3>
           <p class="p-size">Picture us as your digital chefs, mixing a pinch of code with a dash of innovation to cook up the perfect website, app, or workflow automation. We'll whip your digital dreams into reality, serving up solutions so seamless, they'll make your business elevate success.</p>
         </div>
       </div>
@@ -214,7 +223,7 @@
       <div class="col d-flex align-items-start">
         <svg class="bi text-primary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#person-plus"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Digital Marketing</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Digital Marketing</h3>
           <p class="p-size">Our firm can help with digital marketing by using smart strategies to promote your business online, and engage with customers. We'll make sure your ads reach the right people at the right time, increasing your visibility and bringing more customers to your business.</p>
         </div>
       </div>
@@ -224,26 +233,26 @@
   <div class="b-example-divider"></div>
 
   <div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">About Us</h2>
+    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary company-name">About Us</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="col d-flex align-items-start">
         <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Misson</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Misson</h3>
           <p class="p-size">A commitment to fostering success through strategic collaboration. With unwavering dedication, we cultivate partnerships that yield unparalleled value, empowering businesses to thrive in an ever-evolving world.</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#file-person"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Founder</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Founder</h3>
           <p class="p-size">Our founder, a proven industry veteran, took the plunge from a comfy paycheck to start this venture. Despite questionable sanity, his track record speaks for itself. He's here to elevate your business.</p>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <svg class="bi flex-shrink-0 me-3 text-primary" width="1.75em" height="1.75em"><use xlink:href="#globe"/></svg>
         <div>
-          <h3 class="display-7 fw-bold lh-1 mb-3">Purpose</h3>
+          <h3 class="display-7 fw-bold lh-1 mb-3 company-name">Purpose</h3>
           <p class="p-size">At our core, we believe in the transformative power of small, positive changes. Through innovation and dedication, we strive to create a ripple effect of improvement.</p>
         </div>
       </div>
@@ -253,7 +262,7 @@
   <div class="b-example-divider"></div>
 
   <div class="container col-xl-10 col-xxl-8 px-4 py-5" id="free-consult">
-    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary">Free Consultation</h2>
+    <h2 class="display-6 fw-bold lh-1 mb-3 pb-2 border-bottom text-primary company-name">Free Consultation</h2>
     <div class="row align-items-center g-lg-5 py-5">
       <form class="p-4 p-md-5 border rounded-3 bg-light id="contact-form" method="post">
         <div class="mb-3">
@@ -334,7 +343,7 @@
       }
 
       // Set the interval to change the background color every 1000 milliseconds (1 second)
-      setInterval(changeBackgroundColor, 1000);
+      // setInterval(changeBackgroundColor, 1000);
     </script>
 
 </body>

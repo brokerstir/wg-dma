@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.company-name {
+  font-family: 'Fredoka One', cursive;
+}
+
+.custom-bg-color {
+  background-color: #011532 !important;
+}
+
+@keyframes rotateOneTurn {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotate-on-load {
+    animation: rotateOneTurn 2s ease-in-out forwards;
+  }
+
+.shadow-text {
+  text-shadow: 2px -2px 4px blue;
+}
+
 .color-change {
   transition: background-color 0.5s ease;
   /* Initial color */
