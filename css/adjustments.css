@@ -21,6 +21,14 @@
     animation: rotateOneTurn 2s ease-in-out forwards;
   }
 
+.left-nav {
+    margin-left: 250px; /* Adjust this value as needed */
+}
+
+.right-nav {
+    margin-right: 250px; /* Adjust this value as needed */
+}
+
 .shadow-text {
   text-shadow: 2px -2px 4px blue;
 }

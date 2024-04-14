@@ -1,4 +1,12 @@
 setTimeout(function() {
+    var blogButton = document.getElementById('blogButton');
+    blogButton.classList.remove('btn-outline-primary');
+    blogButton.classList.add('btn-primary');
+    blogButton.addEventListener('transitionend', function() {
+        blogButton.classList.remove('transitioning');
+    });
+    blogButton.classList.add('transitioning');
+
     var inspireButton = document.getElementById('inspireButton');
     inspireButton.classList.remove('btn-outline-primary');
     inspireButton.classList.add('btn-primary');
