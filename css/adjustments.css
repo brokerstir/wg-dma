@@ -22,11 +22,21 @@
   }
 
 .left-nav {
-    margin-left: 250px; /* Adjust this value as needed */
+    margin-left: 0; /* Default for smaller devices */
 }
 
 .right-nav {
-    margin-right: 250px; /* Adjust this value as needed */
+    margin-right: 0; /* Default for smaller devices */
+}
+
+@media (min-width: 768px) {
+    .left-nav {
+        margin-left: 250px; /* Adjust this value as needed for larger screens */
+    }
+
+    .right-nav {
+        margin-right: 250px; /* Adjust this value as needed for larger screens */
+    }
 }
 
 .shadow-text {
